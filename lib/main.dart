@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:animated_container_with_bloc/bloc/randomparameters_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -55,15 +53,15 @@ class AnimatedContainerWithBloCState extends State<AnimatedContainerWithBloC> {
               return AnimatedContainer(
                 width: state.width,
                 height: state.height,
-                color: Colors.deepPurple,
+                color: state.color,
                 duration: Duration(
                   seconds: 2,
                 ),
                 child: Text(
-                  'Animated Container',
+                  state.text,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: state.textColor,
                   ),
                 ),
               );
